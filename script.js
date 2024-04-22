@@ -49,6 +49,7 @@ console.log(typeof maddy);
  console.log(typeof null);
  */
 
+ /*
  //lesson 3
  // Three ways of variable declaration
 
@@ -75,3 +76,45 @@ console.log(typeof maddy);
 
  lastName = 'Maigwa'
  console.log(lastName);
+*/
+
+//lesson 4
+ //operators in JavaScript
+
+ //Math operators
+
+ const currentYear = 2024;
+
+ const davidYear = currentYear - 2001;
+ const winnieYear = currentYear - 1996;
+
+ console.log(davidYear, winnieYear);
+ console.log(davidYear*2, davidYear/10, 2**3);
+ //2**3 is 2 to the power of 3 that is 2*2*2
+
+ //string concatenation
+const myFirstName = 'David';
+const myLastName = 'Maigwa';
+
+console.log(myFirstName + ' ' + myLastName);
+
+//Assignment operators
+
+let x = 10+5;
+x += 10;
+x *= 4;
+x += 1;
+x -= 2;
+
+console.log(x);
+
+//comparison opperator
+
+console.log(winnieYear > davidYear); // >, < , >=, <=
+console.log(davidYear <= 22);
+
+//const offAge = davidYear <= 22; //storing the value
+
+console.log(currentYear - 2001 < currentYear - 1996); //presidence
+
+
