@@ -78,6 +78,7 @@ console.log(typeof maddy);
  console.log(lastName);
 */
 
+/*
 //lesson 4
  //operators in JavaScript
 
@@ -116,5 +117,21 @@ console.log(davidYear <= 22);
 //const offAge = davidYear <= 22; //storing the value
 
 console.log(currentYear - 2001 < currentYear - 1996); //presidence
+*/
+
+//lesson 5
+//The operator precedence
+let x,y;
+x = y = 25 - 10 - 5; //25 -10-5 (happens first) then y = 10 x=y which is 10
+console.log(x,y);
+
+
+x = 10;
+y = 20;
+const averageNumber = (x+y);
+console.log(x,y,(averageNumber)/2);
+
+//mdn for more information on precidence 
+
 
 
