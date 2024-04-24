@@ -156,6 +156,8 @@ m tall.
 m tall.
 */
 
+//solution
+/*
 let markMass = 78;
 let markHeight = 1.69;
 
@@ -196,8 +198,11 @@ console.log(higherBmiTwo);
 if ( markBmiTwo > johnBmiTwo){
     console.log("Marks BMI ("+markBmiTwo+")is greater than John's BMI("+johnBmiTwo+")");
 }else{
-    console.log("Johns BMI ("+johnBmiTwo+") is less than Johns's BMI("+johnBmiTwo+")");
+    console.log("Johns BMI ("+johnBmiTwo+") is less than Mark's BMI("+johnBmiTwo+")");
+    console.log(`John BMI is ${johnBmiTwo}
+    and Marsks BMI is ${markBmiTwo}`)
 }
+*/
 
 
 
