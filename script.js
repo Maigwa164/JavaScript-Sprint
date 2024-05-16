@@ -205,9 +205,30 @@ if ( markBmiTwo > johnBmiTwo){
 */
 
 
+//Lesson 13 Srings and Template literals
 
+const firstName = 'David';
+const birthYear = 2001;
+const currentYear = 2024;
+const job = 'Pilot';
+const bio = "I'm " + firstName + ' a ' + (currentYear - birthYear) + ' years old ' + job + '!';
+console.log(bio);
 
+//Using Template Literals
+const bioNew = `I'm ${firstName}, a ${currentYear - birthYear} years old ${job}!`
+console.log(bioNew);
 
+//template literals on normal string
+console.log(`This is normal string on template literals`);
 
+//multiple line the old way
+console.log('This is a \n\
+string with \n\
+Multiple Lines');
+
+//multiple lines using template literals
+console.log(`This is a
+string with
+Multiple Lines`);
 
 
