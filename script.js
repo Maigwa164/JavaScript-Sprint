@@ -204,7 +204,7 @@ if ( markBmiTwo > johnBmiTwo){
 }
 */
 
-
+/*
 //Lesson 13 Srings and Template literals
 
 const firstName = 'David';
@@ -230,5 +230,36 @@ Multiple Lines');
 console.log(`This is a
 string with
 Multiple Lines`);
+*/
 
 
+//Taking Decisions If Else statement
+//drivers license challenge
+
+const currentYear = 2024;
+const birthYear = 2009;
+const offAge = currentYear -birthYear;
+const yearsRemaining = 18 - offAge;
+
+if(offAge >=18){
+    console.log(`You are ${offAge} you can Enroll for Driving lincense🚗`);
+}
+else{
+    console.log(`You can enroll after ${yearsRemaining} years Thankyou!`)
+}
+
+//centuary task
+
+const yearOfBirth = 1963;
+let centuary;
+let generation;
+
+if(yearOfBirth<1997){
+ centuary = 20;
+ generation = 'Millenial'
+ console.log(centuary +'th centuary',generation)
+}else{
+ centuary = 21;
+ generation = 'GenZ'
+ console.log(centuary +'st Centuary',generation);
+}
