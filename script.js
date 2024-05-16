@@ -232,7 +232,7 @@ string with
 Multiple Lines`);
 */
 
-
+/*
 //Taking Decisions If Else statement
 //drivers license challenge
 
@@ -263,3 +263,31 @@ if(yearOfBirth<1997){
  generation = 'GenZ'
  console.log(centuary +'st Centuary',generation);
 }
+*/
+
+//Type conversion and Type coercion
+
+//type conversion
+const inputYear = '2001';
+console.log(inputYear + 18, inputYear);
+console.log(Number(inputYear) + 18 ,inputYear);//converts the string to number
+console.log(typeof NaN);//it's a special type of number
+
+console.log(Number('five'));//cannot convert what is not a number (NaN)
+console.log(String(23));// converts 23 to string
+
+//type coersion
+console.log('I am David '+ 23 + ' years old');// 23 is converted to a string
+console.log('23'-'10'-3); //in subtruction 23 and 10 are converted to numbers
+console.log('23'+'10'+3); //in addition 23 and 10 are converted to strings
+console.log('23'*'2'); //converted to numbers
+console.log('23'/'10'); //converted to numbers
+
+
+//Guess the output
+let n = '1' + 1;
+n = n-1;
+console.log(n);
+
+console.log(2 + 3 + 4 + '5');
+console.log('10' - '4' - '3' - 2 + '5');
