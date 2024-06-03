@@ -400,7 +400,7 @@ Test data:
 § Data Bonus 1: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 123
 § Data Bonus 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106*/
 
-
+/*
 const avgDolphins = (97 + 112 + 80)/3;
 const avgKoalas = (109 + 95 + 50)/3;
 const minAverage =100;
@@ -435,3 +435,6 @@ if(avgDolphins>avgKoalas && avgDolphins>=minAverage){
 }else{
     console.log("None of the team won")
 }
+*/
+
+
