@@ -294,6 +294,8 @@ console.log(2 + 3 + 4 + '5');
 console.log('10' - '4' - '3' - 2 + '5');
 */
 
+/*
+
 //Truthy and falsy values
 console.log(Boolean (NaN));
 console.log(Boolean (undefined));
@@ -316,4 +318,34 @@ if(height){
     console.log("I am growing");
 }else{
     console.log('Height is Undefined');
+}
+*/
+
+//Equality operators == / ===
+const age ='18';
+
+if(age===18) console.log("You are an adult (Strict equality)");
+if(age==18) console.log("You are an adult (Loose equality)");
+
+const favourite =Number(prompt("What is your favourite number?"));
+console.log(favourite);
+console.log(typeof favourite);
+
+/*if(favourite=='23'){// 23 number is converted to 23 string
+    console.log("Cool 23 is a cool number!");
+}*/
+if (favourite ===23 ){
+    console.log("23 is a great number!");
+}else if(favourite===7){
+    console.log("9 is also a great number!");
+}
+else if(favourite===9){
+    console.log("9 is also a great number!");
+
+}else{
+    console.log("Number is not 23, 7 or 9");
+}
+
+if(favourite!==23){
+    console.log("why not 23");
 }
