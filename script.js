@@ -436,6 +436,8 @@ if(avgDolphins>avgKoalas && avgDolphins>=minAverage){
     console.log("None of the team won")
 }
 */
+
+/*
 //Switch statement
 
 const day = 'Wednesday'
@@ -499,4 +501,17 @@ else if(dayofTheWeek ==='Friday'){
 }else{
     console.log('Go to church!');
 }
+*/
+
+// experiment on round off const avg = (10+3+1+6+3+7+8+3+9)/9
+// console.log(avg.toFixed(2));
+
+
+//The conditional operator
+
+const age = 23;
+
+age>=18 ? 'wine🍷' :  'water💦';
+
+console.log(`I like to drink ${age>=18 ? 'wine🍷' :  'water💦'}`);
 
