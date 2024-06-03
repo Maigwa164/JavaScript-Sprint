@@ -436,5 +436,67 @@ if(avgDolphins>avgKoalas && avgDolphins>=minAverage){
     console.log("None of the team won")
 }
 */
+//Switch statement
 
+const day = 'Wednesday'
+switch(day){
+    case 'Monday':
+        console.log('Plan the week');
+        console.log('Attend meetings');
+        break;
+    case 'Tuesday':
+        console.log("Go for workout");
+        console.log('Learn javascript');
+        break;
+    case'Wednesday':
+        // console.log('Attend Kamilimu');
+        // console.log('Attend Hackathon');
+    case'Thursday':
+        console.log('Attend Kamilimu');
+        console.log('Attend Hackathon');
+        break;
+    case'Friday':
+        console.log("Recap of the week");
+        console.log("Hiking");
+        break;
+    case'Saturday':
+        console.log('Grab that beer');
+        console.log('Netflix');
+        break;
+    case'Sunday':
+        console.log('Go to church!');
+
+    default:
+        console.log('Not a day');
+
+}
+
+//with if else
+
+const dayofTheWeek = 'Thursday'
+
+if(dayofTheWeek === 'Monday'){
+    console.log('Plan the week');
+    console.log('Attend meetings');
+}else if(dayofTheWeek === 'Tuesday'){
+    console.log("Go for workout");
+    console.log('Learn javascript');
+}else if(dayofTheWeek ==='Wednesday' || 'Thursday'){
+    console.log('Attend Kamilimu');
+    console.log('Attend Hackathon');
+}
+// else if(dayofTheWeek ==='Thursday'){
+//     console.log('Attend Kamilimu');
+//     console.log('Attend Hackathon');
+else if(dayofTheWeek ==='Friday'){
+    console.log("Recap of the week");
+    console.log("Hiking");
+}else if(dayofTheWeek ==='Saturday'){
+    console.log('Grab that beer');
+    console.log('Netflix');
+}else if(dayofTheWeek === 'Sunday'){
+    console.log('Go to church!');
+}else{
+    console.log('Go to church!');
+}
 
