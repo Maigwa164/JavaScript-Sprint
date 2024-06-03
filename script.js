@@ -321,6 +321,8 @@ if(height){
 }
 */
 
+/*
+
 //Equality operators == / ===
 const age ='18';
 
@@ -333,7 +335,7 @@ console.log(typeof favourite);
 
 /*if(favourite=='23'){// 23 number is converted to 23 string
     console.log("Cool 23 is a cool number!");
-}*/
+}/*
 if (favourite ===23 ){
     console.log("23 is a great number!");
 }else if(favourite===7){
@@ -348,4 +350,30 @@ else if(favourite===9){
 
 if(favourite!==23){
     console.log("why not 23");
+}
+*/
+
+
+//LOGICAL OPERATORS
+const hasDriversLicense = true;
+const hasGoodVision = true;
+
+console.log(hasDriversLicense && hasGoodVision);
+console.log(hasDriversLicense || hasGoodVision);
+console.log(!hasGoodVision);
+
+// if(hasDriversLicense && hasGoodVision){
+//     console.log("David can drive");
+// }else{
+//     console.log("Someone else should drive");
+// }
+
+const isTired = false;
+console.log(hasDriversLicense || hasGoodVision || isTired);
+
+
+if(hasDriversLicense && hasGoodVision && !isTired){
+    console.log("David can drive");
+}else{
+    console.log("Someone else should drive");
 }
