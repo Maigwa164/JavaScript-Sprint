@@ -83,6 +83,7 @@ console.log(retirementYear(1996, 'Winnie'));
 */
 
 
+/*
 //fuctions calling other functions
 
 const cutPieces = function(fruit){
@@ -98,3 +99,41 @@ const fruitProccesor = function(apple,orange){
 }
 
 console.log(fruitProccesor(2,3));
+
+
+
+*/
+
+//Review of Function
+const calcAge = function(birthYear){
+    return 2024 - birthYear;
+}
+
+const ageUntilRetirement= function(dateOfBirth, name ){
+    const age = calcAge(dateOfBirth);
+    const retirement = 60 - age;
+    if(retirement>0){
+        // return retirement;
+        return `${name} has left ${retirement} years before retirement`;
+   
+    }
+    else {
+        // return -1;
+        return `${name} has retiremented 👴🏾`;
+   
+    }
+//     return `${name} has left ${retirement} years before retirement`;
+   
+}
+
+console.log(ageUntilRetirement(2001,'David'));
+console.log(ageUntilRetirement(1950,'Daniel'));
+
+
+//TEST EXAMPLE
+function calcAge (birthYear,firstName){
+    const age = 2024 -birthYear;
+    console.log(`${firstName} is ${age} years old`);
+    return age;
+}
+const age =calcAge(2001, 'David');
