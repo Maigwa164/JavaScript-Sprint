@@ -217,7 +217,7 @@ areaAndPerimeter(recArea.recPerimter);
 */
 
 /////////////////////////////////////////////////////////////////////////////////
-
+/*
 //Arrays
 
 const friends = ['David','George','Alex'];
@@ -262,3 +262,41 @@ console.log(age1,age2,age3);
 
 const ages = [calcAge(birthYear[0]),calcAge(birthYear[1]), calcAge(birthYear[2])];
 console.log(ages);
+*/
+
+
+//Basic Array Operations
+
+const friends = ['Micheal', 'Stephen', 'Peter'];
+
+//method to add an element at the end of the array
+const newLength = friends.push('Jay');
+console.log(friends);
+//To check the return value of push
+console.log(newLength);
+
+friends.unshift('John');
+console.log(friends);
+
+//Removes Element
+//removing last Element
+friends.pop();
+console.log(friends.pop());
+
+//Removing first element
+friends.shift();
+console.log(friends);
+
+//Index of
+console.log(friends.indexOf('Stephen'));
+console.log(friends.indexOf('David'));  //-1 for elements not found
+
+//Includes
+friends.push(23);
+console.log(friends.includes('Stephen'));
+console.log(friends.includes('David'));
+console.log(friends.includes(23)); // use strict comparison '23' would be false
+
+if(friends.includes('Stephen')){
+    console.log(`You have a friend called ${friends[1]}`);
+}
