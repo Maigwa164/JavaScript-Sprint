@@ -167,6 +167,7 @@ Hints:
 Apply this to the team's average scores �
 GOOD LUCK �*/
 
+/*
 //fuction to calculate the average
 const calcAverage = (firstGame, secondGame, thirdGame)=>(firstGame+secondGame+thirdGame)/3;
 
@@ -212,3 +213,52 @@ const areaAndPerimeter= function(myArea,myPerimeter){
     console.log(`The area is ${recArea}and perimeter is ${recPerimter}`);
 }
 areaAndPerimeter(recArea.recPerimter);
+
+*/
+
+/////////////////////////////////////////////////////////////////////////////////
+
+//Arrays
+
+const friends = ['David','George','Alex'];
+console.log(friends);
+
+//printing the position of each element in the array
+console.log(friends[0]);
+console.log(friends[2]);
+
+//getting the length of the array
+console.log(friends.length);
+
+//printing the last element of the array
+
+console.log(friends[friends.length - 1]);
+
+//changing element of an array
+
+friends [2] = 'Abel';
+
+console.log(friends);
+
+
+const firstName = 'David';
+
+const david = [firstName, 'Maigwa', 2024 - 2001, 'Software Engineer', friends[0,1,2]];
+
+console.log(david);
+
+//exercise
+
+const calcAge = function(birthYear){
+    return 2024 - birthYear;
+}
+
+const birthYear = [2000,2001,2002,2003,2004];
+const age1 = calcAge(birthYear[0]);
+const age2 = calcAge(birthYear[1]);
+const age3 = calcAge(birthYear[2]);
+
+console.log(age1,age2,age3);
+
+const ages = [calcAge(birthYear[0]),calcAge(birthYear[1]), calcAge(birthYear[2])];
+console.log(ages);
