@@ -264,7 +264,7 @@ const ages = [calcAge(birthYear[0]),calcAge(birthYear[1]), calcAge(birthYear[2])
 console.log(ages);
 */
 
-
+/*
 //Basic Array Operations
 
 const friends = ['Micheal', 'Stephen', 'Peter'];
@@ -299,4 +299,85 @@ console.log(friends.includes(23)); // use strict comparison '23' would be false
 
 if(friends.includes('Stephen')){
     console.log(`You have a friend called ${friends[1]}`);
+}
+ */
+
+/*
+Coding Challenge #4
+Let's improve Steven's tip calculator even more, this time using loops!
+Your tasks:
+1. Create an array 'bills' containing all 10 test bill values
+2. Create empty arrays for the tips and the totals ('tips' and 'totals')
+3. Use the 'calcTip' function we wrote before (no need to repeat) to calculate 
+tips and total values (bill + tip) for every bill value in the bills array. Use a for
+loop to perform the 10 calculations!
+Test data: 22, 295, 176, 440, 37, 105, 10, 1100, 86 and 52
+Hints: Call ‘calcTip ‘in the loop and use the push method to add values to the 
+tips and totals arrays �
+*/
+
+//My logic
+// const tips = [];
+// const totals = [];
+// const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86,52];
+
+
+// const calcTip = function(bill){
+//     if(bill>=50 && bill<=300){
+//         return `The bill is ${bill} The tip is ${(bill * 0.15)} and the total is ${(bill * 0.15) + bill}`;
+//     }else{
+//         return `The bill is ${bill} The tip is ${(bill * 0.15)} and the total is ${(bill * 0.15) + bill}`;
+//     }
+
+// }
+
+// // console.log(calcTip(60));
+
+// for(let i=0; i<bills.length; i++){
+//    tips.push(calcTip(bills[i]));
+// }
+
+
+
+// console.log(`${tips[0]}
+// ${tips[1]} 
+// ${tips[2]} 
+// ${tips[3]} 
+// ${tips[4]} 
+// ${tips[5]} 
+// ${tips[6]} 
+// ${tips[7]} 
+// ${tips[8]} 
+// ${tips[9]}`);
+
+// Array of bill values
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+
+// Empty arrays to store tips and totals
+const tips = [];
+const totals = [];
+
+// Function to calculate tip
+const calcTip = function(bill) {
+    if (bill >= 50 && bill <= 300) {
+        return bill * 0.15;
+    } else {
+        return bill * 0.20;
+    }
+};
+
+// Loop through each bill value
+for (let i = 0; i < bills.length; i++) {
+    const tip = calcTip(bills[i]); // Calculate tip
+    tips.push(tip); // Store tip in tips array
+    totals.push(bills[i] + tip); // Store total (bill + tip) in totals array
+}
+
+// Print tips and totals arrays
+console.log('Tips:', tips);
+console.log('Totals:', totals);
+
+// Optionally, you can print each result in a formatted way
+for (let i = 0; i < bills.length; i++) {
+    console.log(`Bill: $${bills[i]}, Tip: $${tips[i]}, Total: $${totals[i]}`);
 }
