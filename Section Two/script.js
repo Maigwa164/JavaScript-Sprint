@@ -302,6 +302,37 @@ if(friends.includes('Stephen')){
 }
  */
 
+
+/*Coding Challenge #2
+Steven is still building his tip calculator, using the same rules as before: Tip 15% of 
+the bill if the bill value is between 50 and 300, and if the value is different, the tip is 
+20%.
+Your tasks:
+1. Write a function 'calcTip' that takes any bill value as an input and returns 
+the corresponding tip, calculated based on the rules above (you can check out 
+the code from first tip calculator challenge if you need to). Use the function 
+type you like the most. Test the function using a bill value of 100
+2. And now let's use arrays! So create an array 'bills' containing the test data 
+below
+3. Create an array 'tips' containing the tip value for each bill, calculated from 
+the function you created before
+4. Bonus: Create an array 'total' containing the total values, so the bill + tip
+Test data: 125, 555 and 44*/
+/*
+const calcBill = function(bill){
+    return bill>=50 && bill<=300 ? bill*0.15 : bill * 0.2;
+}
+
+const bill =[125,555,44];
+
+const tip = [calcBill(bill[0]),calcBill(bill[1]),calcBill(bill[2]),];
+
+const total =[tip[0]+bill[0],tip[1]+bill[1],tip[2]+bill[2]];
+
+console.log(total);
+*/
+
+//did before
 /*
 Coding Challenge #4
 Let's improve Steven's tip calculator even more, this time using loops!
@@ -352,30 +383,21 @@ ${tips[8]}
 ${tips[9]}`);
 */
 
-/*Coding Challenge #2
-Steven is still building his tip calculator, using the same rules as before: Tip 15% of 
-the bill if the bill value is between 50 and 300, and if the value is different, the tip is 
-20%.
-Your tasks:
-1. Write a function 'calcTip' that takes any bill value as an input and returns 
-the corresponding tip, calculated based on the rules above (you can check out 
-the code from first tip calculator challenge if you need to). Use the function 
-type you like the most. Test the function using a bill value of 100
-2. And now let's use arrays! So create an array 'bills' containing the test data 
-below
-3. Create an array 'tips' containing the tip value for each bill, calculated from 
-the function you created before
-4. Bonus: Create an array 'total' containing the total values, so the bill + tip
-Test data: 125, 555 and 44*/
 
-const calcBill = function(bill){
-    return bill>=50 && bill<=300 ? bill*0.15 : bill * 0.2;
-}
+/*OBJECTS*/
+//Array recap
+const davidArray = [
+    'David',
+    'Maigwa',
+    2024 - 2001,
+    'Pilot'
+    ['Abel','Victor','Alex']
+]
 
-const bill =[125,555,44];
-
-const tip = [calcBill(bill[0]),calcBill(bill[1]),calcBill(bill[2]),];
-
-const total =[tip[0]+bill[0],tip[1]+bill[1],tip[2]+bill[2]];
-
-console.log(total);
+const david = {
+    firstName: 'David',
+    lastName: 'Maigwa',
+    age: 2024 -2001,
+    job:'Pilot',
+    friends:['Abel','Victor','Alex']
+};
