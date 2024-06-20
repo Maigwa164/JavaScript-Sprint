@@ -316,68 +316,66 @@ Hints: Call ‘calcTip ‘in the loop and use the push method to add values to t
 tips and totals arrays �
 */
 
+/*
 //My logic
-// const tips = [];
-// const totals = [];
-// const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86,52];
-
-
-// const calcTip = function(bill){
-//     if(bill>=50 && bill<=300){
-//         return `The bill is ${bill} The tip is ${(bill * 0.15)} and the total is ${(bill * 0.15) + bill}`;
-//     }else{
-//         return `The bill is ${bill} The tip is ${(bill * 0.15)} and the total is ${(bill * 0.15) + bill}`;
-//     }
-
-// }
-
-// // console.log(calcTip(60));
-
-// for(let i=0; i<bills.length; i++){
-//    tips.push(calcTip(bills[i]));
-// }
-
-
-
-// console.log(`${tips[0]}
-// ${tips[1]} 
-// ${tips[2]} 
-// ${tips[3]} 
-// ${tips[4]} 
-// ${tips[5]} 
-// ${tips[6]} 
-// ${tips[7]} 
-// ${tips[8]} 
-// ${tips[9]}`);
-
-// Array of bill values
-const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
-
-// Empty arrays to store tips and totals
 const tips = [];
 const totals = [];
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86,52];
 
-// Function to calculate tip
-const calcTip = function(bill) {
-    if (bill >= 50 && bill <= 300) {
-        return bill * 0.15;
-    } else {
-        return bill * 0.20;
+
+const calcTip = function(bill){
+    if(bill>=50 && bill<=300){
+        return `The bill is ${bill} The tip is ${(bill * 0.15)} and the total is ${(bill * 0.15) + bill}`;
+    }else{
+        return `The bill is ${bill} The tip is ${(bill * 0.15)} and the total is ${(bill * 0.15) + bill}`;
     }
-};
 
-// Loop through each bill value
-for (let i = 0; i < bills.length; i++) {
-    const tip = calcTip(bills[i]); // Calculate tip
-    tips.push(tip); // Store tip in tips array
-    totals.push(bills[i] + tip); // Store total (bill + tip) in totals array
 }
 
-// Print tips and totals arrays
-console.log('Tips:', tips);
-console.log('Totals:', totals);
+// console.log(calcTip(60));
 
-// Optionally, you can print each result in a formatted way
-for (let i = 0; i < bills.length; i++) {
-    console.log(`Bill: $${bills[i]}, Tip: $${tips[i]}, Total: $${totals[i]}`);
+for(let i=0; i<bills.length; i++){
+   tips.push(calcTip(bills[i]));
 }
+
+
+
+console.log(`${tips[0]}
+${tips[1]} 
+${tips[2]} 
+${tips[3]} 
+${tips[4]} 
+${tips[5]} 
+${tips[6]} 
+${tips[7]} 
+${tips[8]} 
+${tips[9]}`);
+*/
+
+/*Coding Challenge #2
+Steven is still building his tip calculator, using the same rules as before: Tip 15% of 
+the bill if the bill value is between 50 and 300, and if the value is different, the tip is 
+20%.
+Your tasks:
+1. Write a function 'calcTip' that takes any bill value as an input and returns 
+the corresponding tip, calculated based on the rules above (you can check out 
+the code from first tip calculator challenge if you need to). Use the function 
+type you like the most. Test the function using a bill value of 100
+2. And now let's use arrays! So create an array 'bills' containing the test data 
+below
+3. Create an array 'tips' containing the tip value for each bill, calculated from 
+the function you created before
+4. Bonus: Create an array 'total' containing the total values, so the bill + tip
+Test data: 125, 555 and 44*/
+
+const calcBill = function(bill){
+    return bill>=50 && bill<=300 ? bill*0.15 : bill * 0.2;
+}
+
+const bill =[125,555,44];
+
+const tip = [calcBill(bill[0]),calcBill(bill[1]),calcBill(bill[2]),];
+
+const total =[tip[0]+bill[0],tip[1]+bill[1],tip[2]+bill[2]];
+
+console.log(total);
