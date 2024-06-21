@@ -386,14 +386,14 @@ ${tips[9]}`);
 
 /*OBJECTS*/
 //Array recap
-const davidArray = [
+/*const davidArray = [
     'David',
     'Maigwa',
     2024 - 2001,
     'Pilot'
     ['Abel','Victor','Alex']
 ]
-
+*/
 const david = {
     firstName: 'David',
     lastName: 'Maigwa',
