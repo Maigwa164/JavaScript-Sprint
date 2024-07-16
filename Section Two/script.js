@@ -401,3 +401,32 @@ const david = {
     job:'Pilot',
     friends:['Abel','Victor','Alex']
 };
+
+console.log(david.firstName);
+
+const nameKey = 'Name';
+
+console.log(david['first' + 'Name']);
+console.log(david['last' + 'Name']);
+
+//More on bracket notation
+
+const intrestedIn = prompt('What would you like to know about David? firstName, lastName, age, job, friends?');
+// console.log(david[intrestedIn]);
+
+if(david[intrestedIn]){
+    console.log(david[intrestedIn]);
+}else{
+    console.log('Wrong Request! What would you like to know about David? firstName, lastName, age, job, friends?');
+}
+
+//adding elements on an object using dot and bracket notatiuon
+
+david.location = 'Kenya';
+david['twitter'] = '@maigwa164';
+console.log(david);
+
+//challenge
+// David has 3 frriends, and his best friend is Micheal
+
+console.log(david.firstName + ' has ' + david.friends.length + ' friends, and his bestfriend is ' + david.friends[0]);
