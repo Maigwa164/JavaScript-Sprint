@@ -394,6 +394,7 @@ ${tips[9]}`);
     ['Abel','Victor','Alex']
 ]
 */
+/*
 const david = {
     firstName: 'David',
     lastName: 'Maigwa',
@@ -430,3 +431,62 @@ console.log(david);
 // David has 3 frriends, and his best friend is Micheal
 
 console.log(david.firstName + ' has ' + david.friends.length + ' friends, and his bestfriend is ' + david.friends[0]);
+*/
+
+//Object method
+
+const david = {
+    firstName:'David',
+    lastName:'Maigwa',
+    birthYear:2001,
+    job:'Developer',
+    friends:['Micheal', 'Abel','Faith'],
+    hasDriversLicense: true,
+
+    // calcAge: function(birthYear){
+    // return 2024 - birthYear}
+
+
+    // calcAge: function(){
+    //     console.log(this);
+    //     return 2024 - this.birthYear
+    // }
+    calcAge: function(){
+        this.age = 2024 - this.birthYear;
+        return this.age;
+    }, 
+
+    //from the challenge of David Summary
+    checkLicense: function(hasDriversLicense){
+         if(this.hasDriversLicense){
+            return ('has a drivers License');
+        }
+        else if(this.hasDriversLicense === false){
+            return ("doesn't have a driver's Lisence");
+        }
+    },
+
+    //${this.hasDriversLicense? 'has a':"doesn't have"} a driver's license 
+    //you can use this instead of the function
+
+    davidBio: function(){
+        this.bio = (`${this.firstName} is a  ${this.calcAge()} years old ${this.job} and ${this.checkLicense()} ` );
+        return this.bio;
+    }
+};
+
+// console.log(david.calcAge(2001));
+
+// //repeated coputation
+// console.log(david.age);
+// console.log(david.age);
+// console.log(david.age);
+// console.log(david.age);
+
+//using bracket
+// console.log(david['calcAge'](2001));
+
+//challenge
+//write a summary of David [David is a 23 Years old Developer and he has/doesn't have a drivers lisence]
+
+console.log(david.davidBio());
