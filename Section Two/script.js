@@ -433,6 +433,8 @@ console.log(david);
 console.log(david.firstName + ' has ' + david.friends.length + ' friends, and his bestfriend is ' + david.friends[0]);
 */
 
+
+/*
 //Object method
 
 const david = {
@@ -465,10 +467,9 @@ const david = {
             return ("doesn't have a driver's Lisence");
         }
     },
-
+    //you can use the turnery operator instead of the function
     //${this.hasDriversLicense? 'has a':"doesn't have"} a driver's license 
-    //you can use this instead of the function
-
+    
     davidBio: function(){
         this.bio = (`${this.firstName} is a  ${this.calcAge()} years old ${this.job} and ${this.checkLicense()} ` );
         return this.bio;
@@ -490,3 +491,51 @@ const david = {
 //write a summary of David [David is a 23 Years old Developer and he has/doesn't have a drivers lisence]
 
 console.log(david.davidBio());
+*/
+
+//------------CODING CHALLENGE-------------
+/*Coding Challenge #3 
+Let's go back to Mark and John comparing their BMIs! This time, let's use objects to 
+implement the calculations! Remember: BMI = mass / height ** 2 = mass 
+/ (height * height) (mass in kg and height in meter) 
+Your tasks: 
+1. For each of them, create an object with properties for their full name, mass, and 
+height (Mark Miller and John Smith) 
+2. Create a 'calcBMI' method on each object to calculate the BMI (the same 
+method on both objects). Store the BMI value to a property, and also return it 
+from the method 
+3. Log to the console who has the higher BMI, together with the full name and the 
+respective BMI. Example: "John's BMI (28.3) is higher than Mark's (23.9)!" 
+Test data: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m 
+tall.*/
+
+const markMiller = {
+    fullName : 'Mark Miller',
+    mass: 78 ,
+    height: 1.69,
+    calcBIM : function(){
+        this.markBIM = this.mass/(this.height**2);
+        return this.markBIM
+    }
+};
+
+const johnSmith = {
+    fullName : 'John Smith',
+    mass: 92 ,
+    height: 1.95,
+    calcBIM : function(){
+        this.johnBIM = this.mass/(this.height**2);
+        return this.johnBIM;
+    }
+};
+markMiller.calcBIM();
+johnSmith.calcBIM();
+
+// console.log(johnSmith.johnBIM, markMiller.markBIM)
+// console.log(`This is mark BIM ${markMiller.calcBIM()} this is John's BIM ${johnSmith.calcBIM()}`)
+
+if(markMiller.markBIM> johnSmith.johnBIM){
+    console.log(`${markMiller.fullName} BMI (${markMiller.markBIM}) is higher than ${johnSmith.fullName} BMI (${johnSmith.johnBIM})`)
+}else if(markMiller.markBIM<johnSmith.johnBIM){
+    console.log(`${johnSmith.fullName} BMI (${johnSmith.johnBIM}) is higher than ${markMiller.fullName} BMI (${markMiller.markBIM})`)
+}
