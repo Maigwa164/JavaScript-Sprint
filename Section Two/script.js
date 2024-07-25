@@ -551,53 +551,78 @@ if(markMiller.markBIM> johnSmith.johnBIM){
 //     console.log(`This is my ${i} push up🏋🏾‍♀️`);
 // }
 
-const davidArray = ['David','Maigwa',2024-2001,'developer',['Micheal','Faith','Abel','Alex'],true];
-//Empty Array
-const type = [];
-for(let i = 0; i<davidArray.length; i++){
-    //reading emelents from array
-    console.log(davidArray[i], typeof(davidArray[i]));
+// const davidArray = ['David','Maigwa',2024-2001,'developer',['Micheal','Faith','Abel','Alex'],true];
+// //Empty Array
+// const type = [];
+// for(let i = 0; i<davidArray.length; i++){
+//     //reading emelents from array
+//     console.log(davidArray[i], typeof(davidArray[i]));
 
-    //filling empty array
-    // type[i] = typeof davidArray[i] ;
+//     //filling empty array
+//     // type[i] = typeof davidArray[i] ;
 
-    //Filling with pop
-    type.push(typeof davidArray[i]);
+//     //Filling with pop
+//     type.push(typeof davidArray[i]);
 
-}
-console.log(type);
+// }
+// console.log(type);
 
-//Excercise
+// //Excercise
 
-const years = [1991,2007,1969,2020];
-const ages = [];
+// const years = [1991,2007,1969,2020];
+// const ages = [];
 
-for(let i = 0; i<years.length; i++){
-    2037 - years[i];
-    ages.push(2037 - years[i]);
+// for(let i = 0; i<years.length; i++){
+//     2037 - years[i];
+//     ages.push(2037 - years[i]);
 
-    //my logic
+//     //my logic
 
-    // const calcAge = function(){
-    //     return 2024 - years[i];
+//     // const calcAge = function(){
+//     //     return 2024 - years[i];
         
-    // }
+//     // }
 
-    // ages.push(2024 - years[i]);
+//     // ages.push(2024 - years[i]);
+// }
+// console.log(ages);
+
+// //------Continue and Break--------
+// console.log('--------STRINGS ONLY-----')
+// for(let i = 0; i<davidArray.length; i++){
+//     if(typeof davidArray[i] !== 'string')continue;
+//     console.log(davidArray[i],typeof davidArray[i]);
+// }
+
+// //-----------Break with number---------
+// console.log('------BREAK WITH ONLY NUMBERS');
+
+// for(let i= 0; i<davidArray.length;i++){
+//     if(typeof davidArray[i] === 'number')break;
+//     console.log(davidArray[i],typeof davidArray[i]);
+// }
+
+//----------------Looping an array backwards------------
+const david =[
+    'David',
+    'Maigwa',
+    2024 - 2001,
+    'Developer',
+    ['Alex','Faith','Abel','George']
+];
+
+// console.log(david);
+
+for(let i = david.length-1; i>=0; i--){
+    console.log(i,david[i]);
 }
-console.log(ages);
 
-//------Continue and Break--------
-console.log('--------STRINGS ONLY-----')
-for(let i = 0; i<davidArray.length; i++){
-    if(typeof davidArray[i] !== 'string')continue;
-    console.log(davidArray[i],typeof davidArray[i]);
-}
+//---------loop  in loops---------
 
-//-----------Break with number---------
-console.log('------BREAK WITH ONLY NUMBERS');
+for(let i = 1; i<4;i++){
+    console.log(`--------Starting exercise${i}----------`);
 
-for(let i= 0; i<davidArray.length;i++){
-    if(typeof davidArray[i] === 'number')break;
-    console.log(davidArray[i],typeof davidArray[i]);
+    for(let j=1;j<6;j++){
+        console.log(`Excercise ${i} Lifting Weight ${j} 🏋🏾‍♀️`);
+    }
 }
