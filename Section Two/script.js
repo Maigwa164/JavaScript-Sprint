@@ -602,6 +602,8 @@ if(markMiller.markBIM> johnSmith.johnBIM){
 //     console.log(davidArray[i],typeof davidArray[i]);
 // }
 
+
+/*
 //----------------Looping an array backwards------------
 const david =[
     'David',
@@ -624,5 +626,24 @@ for(let i = 1; i<4;i++){
 
     for(let j=1;j<6;j++){
         console.log(`Excercise ${i} Lifting Weight ${j} 🏋🏾‍♀️`);
+    }
+}
+    */
+
+//-----While Loop-----
+// let rep = 1;
+// while(rep<=10){
+//     console.log(`This is my ${rep} lift🏋🏾‍♀️`);
+//     rep++;
+// }
+
+let dice = Math.trunc((Math.random()*6)+1);
+// console.log(dice);
+while(dice!==6){
+    console.log(`You rolled ${dice}`);
+    dice = Math.trunc((Math.random()*6)+1);
+
+    if(dice===6){
+        console.log(`Loop ended you picked a ${dice}`);
     }
 }
