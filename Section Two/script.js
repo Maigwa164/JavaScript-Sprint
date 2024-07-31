@@ -745,7 +745,9 @@ const arr = ["David", "Maigwa"];
 for (let i = arr.length - 1; i >= 0; i--) {
   console.log(arr[i]);
 }*/
+/*
 
+//-----for one array
 const temperature = [3, -2, -6, -1, "error", 9, 13, 17, 15, 14, 9, 5];
 
 const calcTemp = function (temperature) {
@@ -767,6 +769,8 @@ const calcTemp = function (temperature) {
 
 console.log(calcTemp(temperature));
 
+
+//two arrays
 const temp1 = [3, -2, -6, -1, "error", 9, 13, 17, 15, 14, 9, 5];
 const temp2 = [4, -5, -8, 0, "error", 7, 11, 16, 13, 12, 50, 6];
 
@@ -790,3 +794,17 @@ const newCalcTemp = function (temp1, temp2) {
 };
 
 console.log(newCalcTemp(temp1, temp2));
+*/
+
+//----convert
+const temp1 = [3, -2, -6, -1, "error", 9, 13, 17, 15, 14, 9, 5];
+const convert = function (temp) {
+  const add = 273;
+  for (let i = 0; i < temp.length; i++) {
+    if (typeof temp[i] !== "number") continue;
+    temp[i] += add;
+  }
+  return temp;
+};
+
+console.log(convert(temp1));
