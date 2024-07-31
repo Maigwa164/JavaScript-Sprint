@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 /*
 let hasDriversLicense = false;
 const passedTest = true;
@@ -82,7 +82,6 @@ console.log(retirementYear(2001,'David'));
 console.log(retirementYear(1996, 'Winnie'));
 */
 
-
 /*
 //fuctions calling other functions
 
@@ -101,7 +100,6 @@ const fruitProccesor = function(apple,orange){
 console.log(fruitProccesor(2,3));
 
 */
-
 
 /*
 
@@ -302,7 +300,6 @@ if(friends.includes('Stephen')){
 }
  */
 
-
 /*Coding Challenge #2
 Steven is still building his tip calculator, using the same rules as before: Tip 15% of 
 the bill if the bill value is between 50 and 300, and if the value is different, the tip is 
@@ -383,7 +380,6 @@ ${tips[8]}
 ${tips[9]}`);
 */
 
-
 /*OBJECTS*/
 //Array recap
 /*const davidArray = [
@@ -432,7 +428,6 @@ console.log(david);
 
 console.log(david.firstName + ' has ' + david.friends.length + ' friends, and his bestfriend is ' + david.friends[0]);
 */
-
 
 /*
 //Object method
@@ -542,7 +537,6 @@ if(markMiller.markBIM> johnSmith.johnBIM){
     console.log(`${johnSmith.fullName} BMI (${johnSmith.johnBIM}) is higher than ${markMiller.fullName} BMI (${markMiller.markBIM})`)
 }*/
 
-
 //-------------LOOPS----------//
 
 //For loop
@@ -580,7 +574,7 @@ if(markMiller.markBIM> johnSmith.johnBIM){
 
 //     // const calcAge = function(){
 //     //     return 2024 - years[i];
-        
+
 //     // }
 
 //     // ages.push(2024 - years[i]);
@@ -601,7 +595,6 @@ if(markMiller.markBIM> johnSmith.johnBIM){
 //     if(typeof davidArray[i] === 'number')break;
 //     console.log(davidArray[i],typeof davidArray[i]);
 // }
-
 
 /*
 //----------------Looping an array backwards------------
@@ -678,6 +671,7 @@ added together
 length of the array (because that's the number of elements) 
 4.3. Call the function with the 'totals' array */
 
+/*
 
 // -------------------coding challenge one----------
 const billValue = [ 22, 295, 176, 440, 37, 105, 10, 1100, 86, 52 ];
@@ -726,7 +720,7 @@ array using a for loop. In each iteration, add the current value to the
 added together 
 4.2. To calculate the average, divide the sum you calculated before by the 
 length of the array (because that's the number of elements) 
-4.3. Call the function with the 'totals' array */
+4.3. Call the function with the 'totals' array 
 
 
 const arr = [1,2,3,4,5,6,7,8,9,10]
@@ -742,4 +736,57 @@ console.log(calcAverage(arr));
 console.log(calcAverage(billValue));
 console.log(calcAverage(tips));
 console.log(calcAverage(totals));
+*/
 
+//-----------others------
+/*
+const arr = ["David", "Maigwa"];
+
+for (let i = arr.length - 1; i >= 0; i--) {
+  console.log(arr[i]);
+}*/
+
+const temperature = [3, -2, -6, -1, "error", 9, 13, 17, 15, 14, 9, 5];
+
+const calcTemp = function (temperature) {
+  let maxTemp = temperature[0];
+  let minTemp = temperature[0];
+  for (let i = 0; i < temperature.length; i++) {
+    const currenttemp = temperature[i];
+    if (typeof temperature[i] !== "number") continue;
+    if (maxTemp < temperature[i]) {
+      maxTemp = temperature[i];
+    }
+    if (minTemp > temperature[i]) {
+      minTemp = temperature[i];
+    }
+  }
+  console.log(maxTemp, minTemp);
+  return maxTemp - minTemp;
+};
+
+console.log(calcTemp(temperature));
+
+const temp1 = [3, -2, -6, -1, "error", 9, 13, 17, 15, 14, 9, 5];
+const temp2 = [4, -5, -8, 0, "error", 7, 11, 16, 13, 12, 50, 6];
+
+const newCalcTemp = function (temp1, temp2) {
+  const temps = temp1.concat(temp2);
+  console.log(temps);
+  let maxTemp = temps[0];
+  let minTemp = temps[0];
+  for (let i = 0; i < temps.length; i++) {
+    const currenttemp = temps[i];
+    if (typeof temps[i] !== "number") continue;
+    if (maxTemp < temps[i]) {
+      maxTemp = temps[i];
+    }
+    if (minTemp > temps[i]) {
+      minTemp = temps[i];
+    }
+  }
+  console.log(maxTemp, minTemp);
+  return maxTemp - minTemp;
+};
+
+console.log(newCalcTemp(temp1, temp2));
