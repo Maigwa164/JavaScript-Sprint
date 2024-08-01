@@ -813,6 +813,7 @@ for (let i = 0; i < array.length; i++) {
 console.log(array);
 */
 
+/*
 //----convert
 const temp1 = [3, -2, -6, -1, "error", 9, 13, 17, 15, 14, 9, 5];
 const tempFar = [];
@@ -843,3 +844,28 @@ const calcFar = function (tempFar) {
 };
 console.log(tempFar);
 console.log(calcFar(tempFar));
+*/
+
+const calcKelvin = function () {
+  const measument = {
+    type: "temp",
+    unit: "celcius",
+    value: prompt("Enter temperature:"),
+  };
+  const kelvin = Number(measument.value) + 273;
+  return kelvin;
+};
+console.log(calcKelvin());
+
+const Far = {
+  type: "temp",
+  unit: "celcius",
+  value: prompt("Enter Temperature:"),
+
+  calcFar: function () {
+    const kelvin = Number(this.value) + 273;
+    return kelvin;
+  },
+};
+
+console.log(Far.calcFar());
