@@ -796,15 +796,50 @@ const newCalcTemp = function (temp1, temp2) {
 console.log(newCalcTemp(temp1, temp2));
 */
 
+/*
+she  codes
+// create an array
+const array = [1, 2, 3, 4, 5];
+
+// define the value to add to each element
+const increaseBy = 10;
+
+// iterate through the array and add the value to each element
+for (let i = 0; i < array.length; i++) {
+  array[i] += increaseBy;
+}
+
+// print the updated array
+console.log(array);
+*/
+
 //----convert
 const temp1 = [3, -2, -6, -1, "error", 9, 13, 17, 15, 14, 9, 5];
+const tempFar = [];
 const convert = function (temp) {
   const add = 273;
   for (let i = 0; i < temp.length; i++) {
-    if (typeof temp[i] !== "number") continue;
-    temp[i] += add;
+    const k = (temp[i] += add);
+    tempFar.push(k);
   }
-  return temp;
+  //   console.log(tempFar);
+  return tempFar;
 };
 
-console.log(convert(temp1));
+convert(temp1);
+// console.log(convert(temp1));
+// console.log(tempFar);
+
+const calcFar = function (tempFar) {
+  let minTemp = tempFar[0];
+  let maxTemp = tempFar[0];
+
+  for (let i = 0; i < tempFar.length; i++) {
+    if (typeof tempFar[i] !== "number") continue;
+    if (maxTemp < tempFar[i]) maxTemp = tempFar[i];
+    if (minTemp > tempFar[i]) minTemp = tempFar[i];
+  }
+  return `${minTemp},${maxTemp}`;
+};
+console.log(tempFar);
+console.log(calcFar(tempFar));
