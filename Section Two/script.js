@@ -890,16 +890,35 @@ Test data:
 */
 
 //problem 1 function takes the array and prints in celcious and the day
-
+/*
 const arrayData1 = [17, 21, 23];
 const arrayData2 = [12, 5, -5, 0, 4];
 
 const dateTemp = function (arr) {
+  const result = [];
   for (let i = 0; i < arr.length; i++) {
-    console.log(`${arr[i]}°C in ${i + 1} day${i >= 1 ? "s" : ""}`);
+    result.push(`${arr[i]}°C in ${i + 1} day${i >= 1 ? "s" : ""}...`);
   }
+
+  return `...${result}`;
 };
 
-dateTemp(arrayData1);
+console.log(dateTemp(arrayData1));
 console.log("-----------************-------");
-dateTemp(arrayData2);
+console.log(dateTemp(arrayData2));
+*/
+
+//tutorialsolution
+/*
+const arrayData1 = [17, 21, 23];
+const arrayData2 = [12, 5, -5, 0, 4];
+
+const dayTemp = function (arr) {
+  let str = "";
+  for (let i = 0; i < arr.length; i++) {
+    str += `${arr[i]}°C in ${i + 1} day...`;
+  }
+  return str;
+};
+console.log("..." + dayTemp(arrayData1));
+*/
