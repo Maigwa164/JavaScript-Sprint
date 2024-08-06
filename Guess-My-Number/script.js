@@ -27,6 +27,8 @@ document.querySelector('.check').addEventListener('click', function () {
     document.querySelector('.message').textContent = 'Number is empty🥲';
   } else if (guess === secretNumber) {
     document.querySelector('.message').textContent = 'Correct Number🎊';
+    document.querySelector('body').style.backgroundColor = 'green';
+    document.querySelector('.number').style.width = '30rem';
   } else if (guess > secretNumber) {
     score -= 1;
     document.querySelector('.score').textContent = score;
