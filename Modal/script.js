@@ -6,8 +6,21 @@ const btnCloseModal = document.querySelector('.close-modal');
 const btnsOpenModal = document.querySelectorAll('.show-modal');
 
 //confirm all buttons
-console.log(btnsOpenModal);
+// console.log(btnsOpenModal);
+// for (let i = 0; i < btnsOpenModal.length; i++) {
+//   console.log(btnsOpenModal[i].textContent);
+// }
+
+const openModal = function () {
+  modal.classList.remove('hidden');
+  overLay.classList.remove('hidden');
+};
 
 for (let i = 0; i < btnsOpenModal.length; i++) {
-  console.log(btnsOpenModal[i].textContent);
+  btnsOpenModal[i].addEventListener('click', openModal);
 }
+
+btnCloseModal.addEventListener('click', function () {
+  modal.classList.add('hidden');
+  overLay.classList.add('hidden');
+});
