@@ -78,6 +78,8 @@ diceImg.classList.add('hidden'); // setting the dice image to hidden (only appea
 
 //Declaring variable
 let currentScore = 0;
+const scoreCumulative = [0, 0];
+let activePlayer = 0; //setting default player to 0 before switching
 
 //Rolling a Dice on click handler
 btnRoll.addEventListener('click', function () {
@@ -86,10 +88,17 @@ btnRoll.addEventListener('click', function () {
   diceImg.classList.remove('hidden'); //Removing the hidden class to display the dice now on roll
   diceImg.src = `dice-${dice}.png`; //dice is dynamically displayed according to the dice number
 
-  //Adding the current score to the existing score everytime a dice is rolled
-  currentScore += dice;
-  // console.log(currentScore);//checking if current score is adding up to the current score
-  // currentScore0El.textContent = currentScore;// setting the content of current cumulative score to player on to check if it is working
-
   //Cheking if dice ===1 to switch player
+  if (dice !== 1) {
+    //Adding the current score to the existing score everytime a dice is rolled
+    currentScore += dice;
+    // console.log(currentScore);//checking if current score is adding up to the current score
+    // currentScore0El.textContent = currentScore;// setting the content of current cumulative score to player on to check if it is working
+    document.getElementById(`current--${activePlayer}`).textContent =
+      currentScore;
+  } else {
+    document.getElementById(`current--${activePlayer}`).textContent = 0;
+    activePlayer = activePlayer === 0 ? 1 : 0;
+    currentScore = 0;
+  }
 });
