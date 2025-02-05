@@ -83,6 +83,7 @@ diceImg.classList.add('hidden'); // setting the dice image to hidden (only appea
 let currentScore = 0;
 const scoreCumulative = [0, 0];
 let activePlayer = 0; //setting default player to 0 before switching
+let playing = true; // Enable clicking of buttons before player wins
 
 //function to switch player(when one is rolled and when player hold the current score)
 const switchPlayer = function () {
@@ -95,39 +96,45 @@ const switchPlayer = function () {
 
 //Rolling a Dice on click handler
 btnRoll.addEventListener('click', function () {
-  const dice = Math.trunc(Math.random() * 6 + 1); //Random number generator btwn 1-6
-  // console.log(dice);//confirm if random number is generated
-  diceImg.classList.remove('hidden'); //Removing the hidden class to display the dice now on roll
-  diceImg.src = `dice-${dice}.png`; //dice is dynamically displayed according to the dice number
+  if (playing) {
+    const dice = Math.trunc(Math.random() * 6 + 1); //Random number generator btwn 1-6
+    // console.log(dice);//confirm if random number is generated
+    diceImg.classList.remove('hidden'); //Removing the hidden class to display the dice now on roll
+    diceImg.src = `dice-${dice}.png`; //dice is dynamically displayed according to the dice number
 
-  //Cheking if dice ===1 to switch player
-  if (dice !== 1) {
-    //Adding the current score to the existing score everytime a dice is rolled
-    currentScore += dice;
-    // console.log(currentScore);//checking if current score is adding up to the current score
-    // currentScore0El.textContent = currentScore;// setting the content of current cumulative score to player on to check if it is working
-    document.getElementById(`current--${activePlayer}`).textContent =
-      currentScore; //Display the current score dinamically depending on the active player
-  } else {
-    switchPlayer();
+    //Cheking if dice ===1 to switch player
+    if (dice !== 1) {
+      //Adding the current score to the existing score everytime a dice is rolled
+      currentScore += dice;
+      // console.log(currentScore);//checking if current score is adding up to the current score
+      // currentScore0El.textContent = currentScore;// setting the content of current cumulative score to player on to check if it is working
+      document.getElementById(`current--${activePlayer}`).textContent =
+        currentScore; //Display the current score dinamically depending on the active player
+    } else {
+      switchPlayer();
+    }
   }
 });
 
 btnHold.addEventListener('click', function () {
-  scoreCumulative[activePlayer] += currentScore; //takes the current score and adds it to the score on the array
-  document.getElementById(`score--${activePlayer}`).textContent =
-    scoreCumulative[activePlayer];
-  //check if active player score is <=100
-  if (scoreCumulative[activePlayer] >= 20) {
-    document
-      .querySelector(`.player--${activePlayer}`)
-      .classList.add('player--winner');
-    document
-      .querySelector(`.player--${activePlayer}`)
-      .classList.remove('player-active');
-  }
-  //switch to next player on hold
-  else {
-    switchPlayer();
+  if (playing) {
+    scoreCumulative[activePlayer] += currentScore; //takes the current score and adds it to the score on the array
+    document.getElementById(`score--${activePlayer}`).textContent =
+      scoreCumulative[activePlayer];
+    //check if active player score is <=100
+    if (scoreCumulative[activePlayer] >= 20) {
+      playing = false;
+      diceImg.classList.add('hidden');
+      document
+        .querySelector(`.player--${activePlayer}`)
+        .classList.add('player--winner');
+      document
+        .querySelector(`.player--${activePlayer}`)
+        .classList.remove('player-active');
+    }
+    //switch to next player on hold
+    else {
+      switchPlayer();
+    }
   }
 });
