@@ -72,18 +72,38 @@ const currentScore0El = document.getElementById('current--0'); //The current sco
 const currentScore1El = document.getElementById('current--1'); //The current score everytime dice is rolled/during active player
 const diceImg = document.querySelector('.dice'); //Dice image element
 const btnRoll = document.querySelector('.btn--roll'); // Selecting the dice roll btn
-const btnHold = document.querySelector('.btn--hold');
+const btnHold = document.querySelector('.btn--hold'); //Selecting the hold btn
+const btnReset = document.querySelector('.btn--new'); //selecting reset button
 
 //Default setting
 cumulativeScore0El.textContent = 0; //setting initial condition for cumulative score player 1
 cumulativeScore1El.textContent = 0; // setting initial condition for cumulative score player 2
 diceImg.classList.add('hidden'); // setting the dice image to hidden (only appears when dice is rolled)
 
-//Declaring variable
-let currentScore = 0;
-const scoreCumulative = [0, 0];
-let activePlayer = 0; //setting default player to 0 before switching
-let playing = true; // Enable clicking of buttons before player wins
+//Declaring variable due to scoping
+let currentScore, scoreCumulative, activePlayer, playing;
+
+const init = function () {
+  // variable initialization
+  currentScore = 0;
+  scoreCumulative = [0, 0];
+  activePlayer = 0;
+  playing = true;
+
+  //Default setting
+  currentScore0El.textContent = 0; //current score to 0 for player 1
+  currentScore1El.textContent = 0; //current score to 0 for player 2
+  cumulativeScore0El.textContent = 0; //setting initial condition for cumulative score player 1
+  cumulativeScore1El.textContent = 0; // setting initial condition for cumulative score player 2
+
+  diceImg.classList.add('hidden'); // setting the dice image to hidden (only appears when dice is rolled)
+  player0El.classList.remove('player--winner');
+  player1El.classList.remove('player--winner');
+  player0El.classList.add('player--active');
+  player1El.classList.remove('player--active');
+};
+
+init();
 
 //function to switch player(when one is rolled and when player hold the current score)
 const switchPlayer = function () {
@@ -122,7 +142,7 @@ btnHold.addEventListener('click', function () {
     document.getElementById(`score--${activePlayer}`).textContent =
       scoreCumulative[activePlayer];
     //check if active player score is <=100
-    if (scoreCumulative[activePlayer] >= 20) {
+    if (scoreCumulative[activePlayer] >= 100) {
       playing = false;
       diceImg.classList.add('hidden');
       document
@@ -138,3 +158,5 @@ btnHold.addEventListener('click', function () {
     }
   }
 });
+
+btnReset.addEventListener('click', init);
