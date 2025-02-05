@@ -72,6 +72,7 @@ const currentScore0El = document.getElementById('current--0'); //The current sco
 const currentScore1El = document.getElementById('current--1'); //The current score everytime dice is rolled/during active player
 const diceImg = document.querySelector('.dice'); //Dice image element
 const btnRoll = document.querySelector('.btn--roll'); // Selecting the dice roll btn
+const btnHold = document.querySelector('.btn--hold');
 
 //Default setting
 cumulativeScore0El.textContent = 0; //setting initial condition for cumulative score player 1
@@ -82,6 +83,15 @@ diceImg.classList.add('hidden'); // setting the dice image to hidden (only appea
 let currentScore = 0;
 const scoreCumulative = [0, 0];
 let activePlayer = 0; //setting default player to 0 before switching
+
+//function to switch player(when one is rolled and when player hold the current score)
+const switchPlayer = function () {
+  document.getElementById(`current--${activePlayer}`).textContent = 0; //reset the current score content before switching the player
+  activePlayer = activePlayer === 0 ? 1 : 0; //checks the current player before switching
+  currentScore = 0; //resent the current score to 0
+  player0El.classList.toggle('player--active'); //toggle the class between player 1 and 2 (The class only exist on player one and is toggled )
+  player1El.classList.toggle('player--active'); //toggle the class back to 1
+};
 
 //Rolling a Dice on click handler
 btnRoll.addEventListener('click', function () {
@@ -99,10 +109,25 @@ btnRoll.addEventListener('click', function () {
     document.getElementById(`current--${activePlayer}`).textContent =
       currentScore; //Display the current score dinamically depending on the active player
   } else {
-    document.getElementById(`current--${activePlayer}`).textContent = 0; //reset the current score content before switching the player
-    activePlayer = activePlayer === 0 ? 1 : 0; //checks the current player before switching
-    currentScore = 0; //resent the current score to 0
-    player0El.classList.toggle('player--active'); //toggle the class between player 1 and 2 (The class only exist on player one and is toggled )
-    player1El.classList.toggle('player--active'); //toggle the class back to 1
+    switchPlayer();
+  }
+});
+
+btnHold.addEventListener('click', function () {
+  scoreCumulative[activePlayer] += currentScore; //takes the current score and adds it to the score on the array
+  document.getElementById(`score--${activePlayer}`).textContent =
+    scoreCumulative[activePlayer];
+  //check if active player score is <=100
+  if (scoreCumulative[activePlayer] >= 20) {
+    document
+      .querySelector(`.player--${activePlayer}`)
+      .classList.add('player--winner');
+    document
+      .querySelector(`.player--${activePlayer}`)
+      .classList.remove('player-active');
+  }
+  //switch to next player on hold
+  else {
+    switchPlayer();
   }
 });
