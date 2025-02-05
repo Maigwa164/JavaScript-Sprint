@@ -64,6 +64,8 @@ btnRoll.addEventListener('click', function () {
 //************Revision*********** */
 
 //Selecting the elements
+const player0El = document.querySelector('.player--0'); //Selecting player 1
+const player1El = document.querySelector('.player--1'); //Selecting player 2
 const cumulativeScore0El = document.getElementById('score--0'); //cumulative score element player 1
 const cumulativeScore1El = document.getElementById('score--1'); //cumulative score element player 2
 const currentScore0El = document.getElementById('current--0'); //The current score everytime dice is rolled/during active player
@@ -95,10 +97,12 @@ btnRoll.addEventListener('click', function () {
     // console.log(currentScore);//checking if current score is adding up to the current score
     // currentScore0El.textContent = currentScore;// setting the content of current cumulative score to player on to check if it is working
     document.getElementById(`current--${activePlayer}`).textContent =
-      currentScore;
+      currentScore; //Display the current score dinamically depending on the active player
   } else {
-    document.getElementById(`current--${activePlayer}`).textContent = 0;
-    activePlayer = activePlayer === 0 ? 1 : 0;
-    currentScore = 0;
+    document.getElementById(`current--${activePlayer}`).textContent = 0; //reset the current score content before switching the player
+    activePlayer = activePlayer === 0 ? 1 : 0; //checks the current player before switching
+    currentScore = 0; //resent the current score to 0
+    player0El.classList.toggle('player--active'); //toggle the class between player 1 and 2 (The class only exist on player one and is toggled )
+    player1El.classList.toggle('player--active'); //toggle the class back to 1
   }
 });
