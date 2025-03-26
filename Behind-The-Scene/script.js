@@ -53,3 +53,19 @@ console.log(me);
 var me = 'David';
 let job = 'Pilot';
 const year = 2001;
+
+/********Hoisting in functions */
+
+console.log(addDec(2, 3));
+console.log(addExp(2, 3));
+console.log(addArr(2, 3));
+
+function addDec(a, b) {
+  return a + b;
+}
+
+const addExp = function (a, b) {
+  return a + b;
+};
+
+const addArr = (a, b) => a + b;
