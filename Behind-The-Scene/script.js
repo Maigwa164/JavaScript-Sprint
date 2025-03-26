@@ -57,8 +57,8 @@ const year = 2001;
 /********Hoisting in functions */
 
 console.log(addDec(2, 3));
-console.log(addExp(2, 3));
-console.log(addArr(2, 3));
+// console.log(addExp(2, 3));
+// console.log(addArr(2, 3));
 
 function addDec(a, b) {
   return a + b;
@@ -69,3 +69,11 @@ const addExp = function (a, b) {
 };
 
 const addArr = (a, b) => a + b;
+
+//Hoisting pitfall
+// console.log(numProducts);
+if (!numProducts) deleteShoppingCart();
+var numProducts = 10;
+function deleteShoppingCart() {
+  console.log('All products deleted');
+}
