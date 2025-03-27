@@ -46,6 +46,8 @@ calcAge(1991);
 */
 
 /*********Hoisting with variables */
+/*
+
 console.log(me);
 // console.log(jon);
 // console.log(year);
@@ -54,7 +56,7 @@ var me = 'David';
 let job = 'Pilot';
 const year = 2001;
 
-/********Hoisting in functions */
+/********Hoisting in functions 
 
 console.log(addDec(2, 3));
 // console.log(addExp(2, 3));
@@ -87,3 +89,30 @@ const z = 3;
 console.log(x === window.x);
 console.log(y === window.y);
 console.log(z === window.z);
+*/
+
+console.log(this);
+
+const calcAge = function (birthYear) {
+  console.log(2037 - birthYear);
+  console.log(this);
+};
+
+calcAge(2001);
+
+const calcAgeArr = birthYear => {
+  console.log(2037 - birthYear);
+  console.log(this);
+};
+
+calcAgeArr(1996);
+
+const david = {
+  year: 1988,
+  calcAge: function (birthYear) {
+    console.log(2037 - this.year);
+    console.log(this);
+  },
+};
+
+david.calcAge();
