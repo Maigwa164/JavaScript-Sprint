@@ -109,10 +109,24 @@ calcAgeArr(1996);
 
 const david = {
   year: 1988,
-  calcAge: function (birthYear) {
-    console.log(2037 - this.year);
+  calcAge: function () {
     console.log(this);
+    console.log(2037 - this.year);
   },
 };
 
 david.calcAge();
+
+const maigwa = {
+  year: 2010,
+};
+
+//method borrowing
+maigwa.calcAge = david.calcAge;
+
+maigwa.calcAge();
+
+const f = david.calcAge;
+
+// f();
+david.f();
