@@ -91,6 +91,7 @@ console.log(y === window.y);
 console.log(z === window.z);
 */
 
+/*
 console.log(this);
 
 const calcAge = function (birthYear) {
@@ -128,5 +129,25 @@ maigwa.calcAge();
 
 const f = david.calcAge;
 
-// f();
-david.f();
+// f();// calling the function
+*/
+
+/****Regular function and Arrow function */
+
+const maddy = {
+  firstName: 'Maddy',
+  year: 2001,
+  calcAge: function () {
+    console.log(this);
+    console.log(2025 - this.year);
+
+    const ismillenial = function () {
+      console.log(this.year >= 1981 && this.year >= 1996);
+    };
+    ismillenial();
+  },
+  greet: () => console.log(`Heey ${this.firstName}`),
+};
+
+maddy.greet();
+maddy.calcAge();
