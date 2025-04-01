@@ -141,7 +141,13 @@ const maddy = {
     console.log(this);
     console.log(2025 - this.year);
     const self = this; //extending this scope
+    /*
     const ismillenial = function () {
+      console.log(self.year >= 1981 && self.year >= 1996);
+    };
+    ismillenial();
+    */
+    const ismillenial = () => {
       console.log(self.year >= 1981 && self.year >= 1996);
     };
     ismillenial();
