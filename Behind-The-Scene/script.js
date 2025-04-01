@@ -140,6 +140,8 @@ const maddy = {
   calcAge: function () {
     console.log(this);
     console.log(2025 - this.year);
+
+    /***********solution 1***** */
     const self = this; //extending this scope
     /*
     const ismillenial = function () {
@@ -147,6 +149,8 @@ const maddy = {
     };
     ismillenial();
     */
+
+    /***********solution 2***** */
     const ismillenial = () => {
       console.log(self.year >= 1981 && self.year >= 1996);
     };
@@ -157,3 +161,21 @@ const maddy = {
 
 maddy.greet();
 maddy.calcAge();
+
+/*****Argument keyword */
+
+const addExp = function (a, b) {
+  console.log(arguments);
+  return a + b;
+};
+
+console.log(addExp(2, 3, 4, 6));
+
+//arrow function dont have the argument keyword
+
+const addArr = (a, b) => {
+  console.log(arguments);
+  return a + b;
+};
+
+console.log(addArr(2, 3));
