@@ -140,9 +140,9 @@ const maddy = {
   calcAge: function () {
     console.log(this);
     console.log(2025 - this.year);
-
+    const self = this; //extending this scope
     const ismillenial = function () {
-      console.log(this.year >= 1981 && this.year >= 1996);
+      console.log(self.year >= 1981 && self.year >= 1996);
     };
     ismillenial();
   },
