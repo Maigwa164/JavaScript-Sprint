@@ -133,7 +133,7 @@ const f = david.calcAge;
 */
 
 /****Regular function and Arrow function */
-
+/*
 const maddy = {
   firstName: 'Maddy',
   year: 2001,
@@ -141,7 +141,7 @@ const maddy = {
     console.log(this);
     console.log(2025 - this.year);
 
-    /***********solution 1***** */
+    /***********solution 1***** 
     const self = this; //extending this scope
     /*
     const ismillenial = function () {
@@ -150,7 +150,7 @@ const maddy = {
     ismillenial();
     */
 
-    /***********solution 2***** */
+/***********solution 2***** 
     const ismillenial = () => {
       console.log(self.year >= 1981 && self.year >= 1996);
     };
@@ -162,8 +162,7 @@ const maddy = {
 maddy.greet();
 maddy.calcAge();
 
-/*****Argument keyword */
-
+/*****Argument keyword *
 const addExp = function (a, b) {
   console.log(arguments);
   return a + b;
@@ -171,11 +170,33 @@ const addExp = function (a, b) {
 
 console.log(addExp(2, 3, 4, 6));
 
-//arrow function dont have the argument keyword
+//arrow function dont have the argument
 
-const addArr = (a, b) => {
-  console.log(arguments);
-  return a + b;
+// const addArr = (a, b) => {
+//   console.log(arguments);
+//   return a + b;
+// };
+
+// console.log(addArr(2, 3));
+*/
+
+/*******Primitive and objects */
+
+let age = 24;
+let oldAge = age;
+age = 25;
+
+console.log('Age:', age);
+console.log('Old Age:', oldAge);
+
+const me = {
+  firstName: 'David',
+  age: 24,
 };
 
-console.log(addArr(2, 3));
+const friend = me;
+
+friend.age = 28;
+
+console.log('Me is', me.age);
+console.log('Friend is', friend.age);
