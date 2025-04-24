@@ -29,6 +29,9 @@ const restaurant = {
   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+  oder: function (starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
 
   openingHours: {
     thu: {
@@ -45,3 +48,40 @@ const restaurant = {
     },
   },
 };
+
+//Destructuring an array
+let arr = [1, 2, 3];
+const a = arr[0];
+const b = arr[1];
+const c = arr[2];
+
+console.log(a, b, c);
+
+const [x, y, z] = arr;
+
+console.log(x, y, z);
+
+//skipping an element in the array
+const [first, , third] = restaurant.categories;
+// console.log(first, third);
+
+//Swapping /switching odinary way
+
+let [main, , secondary] = restaurant.categories;
+console.log(main, secondary);
+
+// const temp = main;
+// main = secondary;
+// secondary = temp;
+
+// console.log(main, secondary);
+
+//swapping using destructuring
+
+[main, secondary] = [secondary, main];
+
+console.log(main, secondary);
+
+//Receiving two values from a function then destructuring
+const [starter, mainCourse] = restaurant.oder(2, 0);
+console.log(starter, mainCourse);
