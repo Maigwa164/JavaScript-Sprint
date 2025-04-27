@@ -29,9 +29,6 @@ const restaurant = {
   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
-  oder: function (starterIndex, mainIndex) {
-    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
-  },
 
   openingHours: {
     thu: {
@@ -47,7 +44,37 @@ const restaurant = {
       close: 24,
     },
   },
-}; /*
+
+  oder: function (starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
+
+  orderDelivery: function ({
+    starterIndex = 1,
+    mainIndex = 0,
+    time = '20:00',
+    address,
+  }) {
+    console.log(
+      `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be deliverd to ${address} at ${time}`
+    );
+  },
+};
+restaurant.orderDelivery({
+  address: 'Via del Sole',
+  time: '22:30',
+  starterIndex: 2,
+  mainIndex: 2,
+});
+
+//Testing default values
+restaurant.orderDelivery({
+  address: 'Nairobi',
+  starterIndex: 1,
+  //time :20:00
+  //mainIndex: 0:
+});
+/*
 //*************Destructuring an array*************
 let arr = [1, 2, 3];
 const a = arr[0];
@@ -139,3 +166,27 @@ const {
 } = openingHours;
 
 console.log(o, c);
+
+//practice question
+/*
+const calcAreas = {
+  length: 5,
+  width: 2,
+  radius: 7,
+  calcArea: function ({ length = 0, width = 0, radius = 0 }) {
+    const squareArea = width * width;
+    const circleArea = 3.14 * radius * radius;
+    const rectangleArea = length * width;
+
+    console.log(
+      `The square area is: ${squareArea} The Circle is: ${circleArea} The Area of rectacgle : ${rectangleArea}`
+    );
+  },
+};
+
+calcAreas.calcArea({
+  length: 30,
+  width: 20,
+  radius: 7,
+});
+*/
