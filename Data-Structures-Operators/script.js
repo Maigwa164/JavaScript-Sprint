@@ -208,3 +208,7 @@ console.log(newArr);
 console.log(...newArr);
 //its like writing
 console.log(1, 2, 7, 8, 9);
+
+//spread operator in practice
+const newMenu = [...restaurant.mainMenu, 'Ugali'];
+console.log(newMenu);
