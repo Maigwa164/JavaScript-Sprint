@@ -212,3 +212,13 @@ console.log(1, 2, 7, 8, 9);
 //spread operator in practice
 const newMenu = [...restaurant.mainMenu, 'Ugali'];
 console.log(newMenu);
+
+//Copy array
+
+const mainMenuCopy = { ...restaurant.mainMenu };
+console.log(mainMenuCopy);
+
+//Join 2 arrays
+
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+console.log(menu);
