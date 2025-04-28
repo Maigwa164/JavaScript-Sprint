@@ -59,6 +59,11 @@ const restaurant = {
       `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be deliverd to ${address} at ${time}`
     );
   },
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(
+      `Here is your delicious Pasta with ${ing1}, ${ing2} and ${ing3}`
+    );
+  },
 };
 
 /*
@@ -231,3 +236,15 @@ console.log(...str);
 
 //this wont work because spread operator only works with places with multiple values separated by commas
 // console.log(`${...str}`);
+
+//spread operator on functions
+const ingridients = [
+  prompt("Let's make Pasta! Ingridient 1?"),
+  prompt('Ingridient 2?'),
+  prompt('Ingridient 3?'),
+];
+console.log(ingridients);
+//old way
+restaurant.orderPasta(ingridients[0], ingridients[1], ingridients[2]);
+//with spread operator
+restaurant.orderPasta(...ingridients);
