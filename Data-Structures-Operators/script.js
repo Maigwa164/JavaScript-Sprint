@@ -222,3 +222,12 @@ console.log(mainMenuCopy);
 
 const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 console.log(menu);
+
+//spread operator on strings
+const str = 'David';
+const letters = [...str, '', 'M'];
+console.log(letters);
+console.log(...str);
+
+//this wont work because spread operator only works with places with multiple values separated by commas
+// console.log(`${...str}`);
