@@ -237,6 +237,7 @@ console.log(...str);
 //this wont work because spread operator only works with places with multiple values separated by commas
 // console.log(`${...str}`);
 
+/*
 //spread operator on functions
 const ingridients = [
   prompt("Let's make Pasta! Ingridient 1?"),
@@ -248,3 +249,16 @@ console.log(ingridients);
 restaurant.orderPasta(ingridients[0], ingridients[1], ingridients[2]);
 //with spread operator
 restaurant.orderPasta(...ingridients);
+*/
+
+//****spread operator in object */
+//creating a new restautant object with all data from the original object
+const newRestautant = { foundedIn: 1998, ...restaurant, founder: 'Guiseppe' };
+//order doesnt matter
+console.log(newRestautant);
+
+//creating shallow copy of an object
+const restaurantCopy = { ...restaurant };
+restaurantCopy.name = 'Ristorante Roma';
+console.log(restaurantCopy.name);
+console.log(restaurant.name);
