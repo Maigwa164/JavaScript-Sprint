@@ -60,6 +60,8 @@ const restaurant = {
     );
   },
 };
+
+/*
 restaurant.orderDelivery({
   address: 'Via del Sole',
   time: '22:30',
@@ -128,11 +130,13 @@ console.log(p, q, r);
 
 */
 
-/*******************Destructuring an Object********/
+/*
+
+/*******************Destructuring an Object********
 const { name, openingHours, categories } = restaurant;
 console.log(name, openingHours, categories);
 
-//****renaming property name */
+//****renaming property name *
 const {
   name: restaurantName,
   openingHours: hours,
@@ -190,3 +194,17 @@ calcAreas.calcArea({
   radius: 7,
 });
 */
+
+/*********Spread operator */
+const arr = [7, 8, 9];
+const newBadArr = [1, 2, arr[0], arr[1], arr[2]];
+console.log(newBadArr);
+
+//using spread operator
+const newArr = [1, 2, ...arr];
+console.log(newArr);
+
+//using spread operator to get individual
+console.log(...newArr);
+//its like writing
+console.log(1, 2, 7, 8, 9);
