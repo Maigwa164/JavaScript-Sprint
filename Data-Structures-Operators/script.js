@@ -262,3 +262,35 @@ const restaurantCopy = { ...restaurant };
 restaurantCopy.name = 'Ristorante Roma';
 console.log(restaurantCopy.name);
 console.log(restaurant.name);
+
+/**********The REST PATTERN AND PARAMETERS */
+//Destructuring
+//Spread operator since it's on the right side of the =
+const arrs = [1, 2, ...[3, 4, 4]];
+console.log(arrs);
+
+//Rest pattern because its on the left side of the =
+
+const [a, b, ...others] = [1, 2, 3, 4, 5];
+console.log(a, b, others);
+
+//Using the three dots on both sides
+const [pizza, , risotto, ...otherFoood] = [
+  ...restaurant.mainMenu,
+  ...restaurant.starterMenu,
+];
+console.log(pizza, risotto, otherFoood);
+
+//-----Functions
+
+const add = function (...numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  console.log(sum);
+};
+
+add(2, 3);
+add(5, 3, 7, 2);
+add(8, 2, 5, 3, 2, 1, 4);
