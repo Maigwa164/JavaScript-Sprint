@@ -321,7 +321,8 @@ restaurant.orderPizza('onion', 'cheese', 'pinaple', 'chicken');
 restaurant.orderPizza('onion');
 */
 
-/*************Short circuiting */
+/*
+/*************Short circuiting *
 console.log('-----------OR operator-------');
 console.log(3 || 'David');
 console.log('' || 'David');
@@ -350,6 +351,19 @@ console.log('Hello' && 23 && null && 'Jonas');
 if (restaurant.orderPizza) {
   restaurant.orderPizza('Mushroom', 'spinach');
 }
-//usinf AND shortcircuit
+//using AND shortcircuit
 
 restaurant.orderPizza && restaurant.orderPizza('Mushroom', 'spinach');
+*/
+
+/***************Nullish Coalescing Operator */
+
+//Using the OR Operator
+restaurant.numGuests = 0;
+const guest = restaurant.numGuests || 10;
+console.log(guest);
+
+//Nullish Coalescing Operator
+//Nullish :null and undefined (NOT 0 OR '')
+const guestCorrect = restaurant.numGuests ?? 10;
+console.log(guestCorrect);
