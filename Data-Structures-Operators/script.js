@@ -210,7 +210,7 @@ calcAreas.calcArea({
 });
 */
 
-/*********Spread operator */
+/*********Spread operator *
 const arr = [7, 8, 9];
 const newBadArr = [1, 2, arr[0], arr[1], arr[2]];
 console.log(newBadArr);
@@ -259,9 +259,9 @@ console.log(ingridients);
 restaurant.orderPasta(ingridients[0], ingridients[1], ingridients[2]);
 //with spread operator
 restaurant.orderPasta(...ingridients);
-*/
+*
 
-//****spread operator in object */
+//****spread operator in object *
 //creating a new restautant object with all data from the original object
 const newRestautant = { foundedIn: 1998, ...restaurant, founder: 'Guiseppe' };
 //order doesnt matter
@@ -273,7 +273,7 @@ restaurantCopy.name = 'Ristorante Roma';
 console.log(restaurantCopy.name);
 console.log(restaurant.name);
 
-/**********The REST PATTERN AND PARAMETERS */
+/**********The REST PATTERN AND PARAMETERS *
 //Destructuring
 //Spread operator since it's on the right side of the =
 const arrs = [1, 2, ...[3, 4, 4]];
@@ -319,3 +319,11 @@ add(...x);
 // restaurant.orderPizza(...specialMenu);
 restaurant.orderPizza('onion', 'cheese', 'pinaple', 'chicken');
 restaurant.orderPizza('onion');
+*/
+
+/*************Short circuiting */
+console.log(3 || 'David');
+console.log('' || 'David');
+console.log(true || 0);
+console.log(undefined || null);
+console.log(undefined || 0 || '' || 'Hello' || 23 || null);
