@@ -64,6 +64,10 @@ const restaurant = {
       `Here is your delicious Pasta with ${ing1}, ${ing2} and ${ing3}`
     );
   },
+  orderPizza: function (mainIngridient, ...otherIngridients) {
+    console.log(mainIngridient);
+    console.log(otherIngridients);
+  },
 };
 
 /*
@@ -299,3 +303,6 @@ add(8, 2, 5, 3, 2, 1, 4);
 
 const x = [23, 5, 7];
 add(...x);
+
+//restaurant example
+restaurant.orderPizza('onion', 'cheese', 'pinaple', 'chicken');
