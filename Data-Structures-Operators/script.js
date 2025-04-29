@@ -67,6 +67,12 @@ const restaurant = {
   orderPizza: function (mainIngridient, ...otherIngridients) {
     console.log(mainIngridient);
     console.log(otherIngridients);
+    //logic to be implimented
+    // if (this.otherIngridients) {
+    //   console.log(`Pizza with only ${mainIngridient}`);
+    // } else {
+    //   console.log(`Pizza with ${mainIngridient} and ${otherIngridients}`);
+    // }
   },
 };
 
@@ -312,3 +318,4 @@ add(...x);
 // const specialMenu = ['onion', 'cheese', 'pinaple', 'chicken'];
 // restaurant.orderPizza(...specialMenu);
 restaurant.orderPizza('onion', 'cheese', 'pinaple', 'chicken');
+restaurant.orderPizza('onion');
