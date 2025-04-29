@@ -345,3 +345,11 @@ console.log('----------AND Operator------');
 console.log(0 && 'Jonas');
 console.log(7 && 'Jonas');
 console.log('Hello' && 23 && null && 'Jonas');
+
+//practicle example
+if (restaurant.orderPizza) {
+  restaurant.orderPizza('Mushroom', 'spinach');
+}
+//usinf AND shortcircuit
+
+restaurant.orderPizza && restaurant.orderPizza('Mushroom', 'spinach');
