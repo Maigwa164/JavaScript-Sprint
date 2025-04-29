@@ -322,8 +322,21 @@ restaurant.orderPizza('onion');
 */
 
 /*************Short circuiting */
+console.log('-----------OR operator-------');
 console.log(3 || 'David');
 console.log('' || 'David');
 console.log(true || 0);
 console.log(undefined || null);
 console.log(undefined || 0 || '' || 'Hello' || 23 || null);
+
+//Practical exaple on the restaurant object
+//checking if property exist and setting values
+
+// restaurant.numGuests = 23;
+//using ternary operator
+const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+console.log(guests1);
+
+//using the OR shortcircuit
+const guests2 = restaurant.numGuests || 10;
+console.log(guests2);
