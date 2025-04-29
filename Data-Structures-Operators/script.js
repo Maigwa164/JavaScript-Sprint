@@ -285,6 +285,10 @@ const [pizza, , risotto, ...otherFoood] = [
 ];
 console.log(pizza, risotto, otherFoood);
 
+//Rest pattern in Objects
+const { sat, ...weekdays } = restaurant.openingHours;
+console.log(weekdays);
+
 //-----Functions
 
 const add = function (...numbers) {
@@ -305,4 +309,6 @@ const x = [23, 5, 7];
 add(...x);
 
 //restaurant example
+// const specialMenu = ['onion', 'cheese', 'pinaple', 'chicken'];
+// restaurant.orderPizza(...specialMenu);
 restaurant.orderPizza('onion', 'cheese', 'pinaple', 'chicken');
