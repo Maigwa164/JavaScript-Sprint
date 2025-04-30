@@ -404,8 +404,16 @@ console.log(rest2);
 //Logical AND assignment operator
 
 //using the AND opertator
-rest1.owner = rest1.owner && '<ANONYMOUS>';
-rest2.owner = rest2.owner && '<ANONYMOUS>';
+// rest1.owner = rest1.owner && '<ANONYMOUS>';
+// rest2.owner = rest2.owner && '<ANONYMOUS>';
+
+// console.log(rest1);
+// console.log(rest2);
+
+// using Logical AND assignment operator
+
+rest1.owner &&= '<ANONYMOUS>';
+rest2.owner &&= '<ANONYMOUS>';
 
 console.log(rest1);
 console.log(rest2);
