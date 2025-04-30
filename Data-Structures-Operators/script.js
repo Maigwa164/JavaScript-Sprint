@@ -356,7 +356,7 @@ if (restaurant.orderPizza) {
 restaurant.orderPizza && restaurant.orderPizza('Mushroom', 'spinach');
 */
 
-/***************Nullish Coalescing Operator */
+/***************Nullish Coalescing Operator *
 
 //Using the OR Operator
 restaurant.numGuests = 0;
@@ -367,3 +367,28 @@ console.log(guest);
 //Nullish :null and undefined (NOT 0 OR '')
 const guestCorrect = restaurant.numGuests ?? 10;
 console.log(guestCorrect);
+*/
+
+/***************Logical Assignment Operator *******/
+
+const rest1 = {
+  name: 'Capri',
+  numGuests: 20,
+};
+
+const rest2 = {
+  name: 'La Piazza',
+  owner: 'Giovanni Rossi',
+};
+
+//Using OR operator
+rest1.numGuests = rest1.numGuests || 10;
+rest2.numGuests = rest2.numGuests || 10;
+console.log(rest1.numGuests, rest2.numGuests);
+
+//Using OR assignment operator
+rest1.numGuests ||= 10;
+rest2.numGuests ||= 10;
+
+console.log(rest1);
+console.log(rest2);
