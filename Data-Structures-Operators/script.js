@@ -383,20 +383,29 @@ const rest2 = {
 };
 
 //Using OR operator
-rest1.numGuests = rest1.numGuests || 10;
-rest2.numGuests = rest2.numGuests || 10;
-console.log(rest1.numGuests, rest2.numGuests);
+// rest1.numGuests = rest1.numGuests || 10;
+// rest2.numGuests = rest2.numGuests || 10;
+// console.log(rest1.numGuests, rest2.numGuests);
 
-//Using OR assignment operator
-rest1.numGuests ||= 10;
-rest2.numGuests ||= 10;
+// //Using OR assignment operator
+// rest1.numGuests ||= 100;
+// rest2.numGuests ||= 100;
 
-console.log(rest1);
-console.log(rest2);
+// console.log(rest1);
+// console.log(rest2);
 
 //Using nullish assignment operator
 rest1.numGuests ??= 10;
 rest2.numGuests ??= 10;
+
+console.log(rest1);
+console.log(rest2);
+
+//Logical AND assignment operator
+
+//using the AND opertator
+rest1.owner = rest1.owner && '<ANONYMOUS>';
+rest2.owner = rest2.owner && '<ANONYMOUS>';
 
 console.log(rest1);
 console.log(rest2);
