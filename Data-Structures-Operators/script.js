@@ -518,3 +518,9 @@ new array ('players1Final') containing all the original team1 players plus
 
 const players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
 console.log(players1Final);
+
+/*Based on the game.odds object, create one variable for each odd (called 
+'team1', 'draw' and 'team2') */
+
+const { team1 = 0, x = 0, team2 = 0 } = game.odds;
+console.log(team1, x, team2);
