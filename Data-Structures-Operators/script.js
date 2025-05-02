@@ -506,3 +506,8 @@ console.log(players2);
 const [gk, ...fieldplayers] = players1;
 
 console.log(gk, fieldplayers);
+
+//3. Create an array 'allPlayers' containing all players of both teams (22 players)
+
+const allPlayers = [...players1, ...players2];
+console.log(allPlayers);
