@@ -511,3 +511,10 @@ console.log(gk, fieldplayers);
 
 const allPlayers = [...players1, ...players2];
 console.log(allPlayers);
+
+/*4. During the game, Bayern Munich (team 1) used 3 substitute players. So create a 
+new array ('players1Final') containing all the original team1 players plus 
+'Thiago', 'Coutinho' and 'Perisic'*/
+
+const players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
+console.log(players1Final);
