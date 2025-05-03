@@ -491,6 +491,11 @@ const game = {
     x: 3.25,
     team2: 6.5,
   },
+  printGoals: function (...players) {
+    for (let i = 0; i < players.length; i++) {
+      console.log(players[i]);
+    }
+  },
 };
 
 // Create one player array for each team (variables 'players1' and 'players2')
@@ -519,8 +524,18 @@ new array ('players1Final') containing all the original team1 players plus
 const players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
 console.log(players1Final);
 
-/*Based on the game.odds object, create one variable for each odd (called 
+/* 5 .Based on the game.odds object, create one variable for each odd (called 
 'team1', 'draw' and 'team2') */
 
-const { team1 = 0, x = 0, team2 = 0 } = game.odds;
-console.log(team1, x, team2);
+const { team1 = 0, x: draw = 0, team2 = 0 } = game.odds;
+console.log(team1, draw, team2);
+
+/* 6 .Write a function ('printGoals') that receives an arbitrary number of player 
+names (not an array) and prints each of them to the console, along with the 
+number of goals that were scored in total (number of player names passed in) 
+//Test data for 6.: First, use players 'Davies', 'Muller', 'Lewandowski' and 'Kimmich'. 
+Then, call the function again with players from game.scored*/
+
+game.printGoals(...players1);
+console.log('---------------------------------');
+game.printGoals(...players2);
