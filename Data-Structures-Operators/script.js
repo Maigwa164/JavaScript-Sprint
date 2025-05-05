@@ -546,8 +546,12 @@ operator.*/
 //   game.team1;
 // console.log(win);
 
-const winner =
-  (game.odds.team1 && game.team1) ||
-  game.odds.x ||
-  (game.odds.team2 && game.team2);
-console.log(`${winner} is likely to win`);
+// const winner = game.odds.team1 && game.team1;
+// game.odds.x || (game.odds.team2 && game.team2);
+// console.log(`${winner} is likely to win`);
+
+game.odds.team1 < game.odds.team2 &&
+  console.log(`${game.team1} is likely to win`);
+
+game.odds.team1 > game.odds.team2 &&
+  console.log(`${game.team2} is likely to win`);
