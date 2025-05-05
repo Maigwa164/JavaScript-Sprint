@@ -539,3 +539,13 @@ Then, call the function again with players from game.scored*/
 game.printGoals(...players1);
 console.log('---------------------------------');
 game.printGoals(...players2);
+
+/*7. The team with the lower odd is more likely to win. Print to the console which 
+team is more likely to win, without using an if/else statement or the ternary 
+operator.*/
+
+const win =
+  game.odds.team1 < game.odds.team2 &&
+  game.odds.team1 < game.odds.x &&
+  game.team1;
+console.log(win);
