@@ -544,8 +544,14 @@ game.printGoals(...players2);
 team is more likely to win, without using an if/else statement or the ternary 
 operator.*/
 
-const win =
-  game.odds.team1 < game.odds.team2 &&
-  game.odds.team1 < game.odds.x &&
-  game.team1;
-console.log(win);
+// const win =
+//   game.odds.team1 < game.odds.team2 &&
+//   game.odds.team1 < game.odds.x &&
+//   game.team1;
+// console.log(win);
+
+const winner =
+  (game.odds.team1 && game.team1) ||
+  game.odds.x ||
+  (game.odds.team2 && game.team2);
+console.log(`${winner} is likely to win`);
